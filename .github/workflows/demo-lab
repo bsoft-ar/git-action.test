@@ -1,13 +1,22 @@
 name: demo-lab
-on: push
+
+on: 
+  push:
+
 jobs:
-    dev-deploy:
-     runs-on: ubuntu-latest
-     steps:
-     - name: echo string
-       run: echo "hello world"
-     - name: commands
-       run: |
-        npm -v
-        node -v
-        
+  dev-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Echo string
+        run: echo "hello world"
+
+      - name: Check Node.js and npm versions
+        run: |
+          npm -v
+          node -v
+
+
