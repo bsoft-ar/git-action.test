@@ -2,7 +2,8 @@ name: demo-lab
 
 on: 
   push:
-
+    branches:
+       - main
 jobs:
   dev-deploy:
     runs-on: ubuntu-latest
